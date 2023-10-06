@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -124,4 +124,3 @@ int main(int argc, char *argv[])
 	printf("%s\n", np);
 	return (0);
 }
-
