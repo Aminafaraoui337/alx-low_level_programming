@@ -14,17 +14,17 @@
 void print_addr(char *ptr)
 {
 	int i;
-	int start
+	int begin;
 	char sys;
 
-	printf("  Entry point address:\t0x");
+	printf("  Entry point address:               0x");
 
 	sys = ptr[4] + '0';
 	if (sys == '1')
 	{
-		start= 26;
+		begin = 26;
 		printf("80");
-		for (i = start; i >= 22; i--)
+		for (i = begin; i >= 22; i--)
 		{
 			if (ptr[i] > 0)
 				printf("%x", ptr[i]);
@@ -37,8 +37,8 @@ void print_addr(char *ptr)
 
 	if (sys == '2')
 	{
-		start = 26;
-		for (i = start; i > 23; i--)
+		begin = 26;
+		for (i = begin; i > 23; i--)
 		{
 			if (ptr[i] >= 0)
 				printf("%02x", ptr[i]);
@@ -244,3 +244,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+
